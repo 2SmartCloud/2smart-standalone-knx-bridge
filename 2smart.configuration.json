@@ -1,0 +1,86 @@
+{
+    "title": "KNX Bridge",
+    "type": "knx-bridge",
+    "registry": "2smartdev/2smart-standalone-knx-bridge",
+    "configuration": {
+        "fields": [
+            {
+                "name": "DEVICE_NAME",
+                "type": "string",
+                "label": "Device name",
+                "default": "KNX Bridge",
+                "validation": []
+            },
+            {
+                "name": "KNX_CONNECTION_IP_ADDR",
+                "type": "string",
+                "label": "Connection IP*",
+                "validation": [
+                    "required",
+                    "string"
+                ]
+            },
+            {
+                "name": "KNX_CONNECTION_IP_PORT",
+                "type": "integer",
+                "label": "Connection port*",
+                "default": 3671,
+                "validation": [
+                    "required",
+                    "positive_integer"
+                ]
+            },
+            {
+                "name": "KNX_CONNECTION_PHYS_ADDR",
+                "type": "string",
+                "label": "Physical address of the ip interface*",
+                "validation": [
+                    "required",
+                    "string"
+                ],
+                "placeholder": "1.1.1"
+            },
+            {
+                "name": "KNX_CONNECTION_LOCAL_PORT_BINDING",
+                "type": "integer",
+                "label": "Local Port*",
+                "default": 3672,
+                "validation": [
+                    "required",
+                    "positive_integer"
+                ]
+            },
+            {
+                "name": "KNX_CONNECTION_LOCAL_IP",
+                "type": "string",
+                "label": "Local IP*",
+                "validation": [
+                    "required",
+                    "string"
+                ]
+            },
+            {
+                "name": "DEBUG",
+                "type": "string",
+                "label": "Debug",
+                "default": null
+            },
+            {
+                "name": "nodes.config",
+                "type": "json",
+                "label": "Nodes Configuration*",
+                "default": {
+                    "nodes": [],
+                    "extensions": {
+                        "mapping": {}
+                    }
+                },
+                "validation": [
+                    "required",
+                    "any_object"
+                ]
+            }
+        ]
+    },
+    "icon": "favicon.svg"
+}

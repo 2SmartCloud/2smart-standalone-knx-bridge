@@ -1,0 +1,71 @@
+{
+  "extensions": {
+    "mapping" : {
+      "dim1/switch" : {
+        "transport"  : {
+          "type": "knx",
+          "get": ["0/0/2"],
+          "set": "0/0/1",
+          "dpt": "DPT1.001"
+        }
+      },
+      "dim1/$options/optionsid" : {
+        "transport"  : {
+          "type": "knx",
+          "get": ["0/0/2"],
+          "set": "0/0/1",
+          "dpt": "DPT1.001"
+        }
+      },
+      "dim1/$options/telemetryid" : {
+        "transport"  : {
+          "type": "knx",
+          "get": ["0/0/2"],
+          "set": "0/0/1",
+          "dpt": "DPT1.001"
+        }
+      }
+    }
+  },
+  "deviceConfig": {
+    "nodes": [
+      {
+        "id"       : "dim1",
+        "name"     : "dim1",
+        "sensors"  : [
+          {
+            "dataType": "boolean",
+
+            "id"       : "switch",
+            "unit"     : "",
+            "retained" : true,
+            "settable" : true,
+            "name"     : "switch"
+          }
+        ],
+        "options"   : [
+          {
+            "dataType": "boolean",
+
+            "id"       : "optionsid",
+            "unit"     : "",
+            "retained" : true,
+            "settable" : true,
+            "name"     : "switch"
+          }
+        ],
+        "telemetry" : [
+          {
+            "dataType": "boolean",
+
+            "id"       : "telemetryid",
+            "unit"     : "",
+            "retained" : true,
+            "settable" : true,
+            "name"     : "switch"
+          }
+        ]
+      }
+    ]
+  }
+}
