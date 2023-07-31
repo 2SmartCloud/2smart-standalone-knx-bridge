@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "bluebird": "^3.7.2",
-        "homie-sdk": "github:2SmartCloud/2smart-standalone-homie-sdk",
+        "homie-sdk": "^1.0.0",
         "ip": "^1.1.5",
         "knx": "^2.3.7",
         "knx-ip": "^0.0.16",
